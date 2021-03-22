@@ -26,12 +26,6 @@ namespace WebBrowser.UI
         {
             //add code?
         }
-        /**
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-        */
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -111,14 +105,6 @@ namespace WebBrowser.UI
 
         }
 
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
-        {
-            //Address Box
-            //add code here
-
-
-        }
-
         private void BackButton_Click(object sender, EventArgs e)
         {
 
@@ -142,6 +128,7 @@ namespace WebBrowser.UI
         private void GoButton_Click(object sender, EventArgs e)
         {
             // add code here
+
         }
 
         private void BookMarkButton_Click(object sender, EventArgs e)
@@ -151,6 +138,18 @@ namespace WebBrowser.UI
 
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void AddressBox_Click(object sender, EventArgs e)
+        {
+            //address box
+            String url = AddressBox.Text;
+            if(Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+            {
+                AddressBox.Text = url;
+                webBrowser1.Navigate(url);
+            }
 
         }
     }

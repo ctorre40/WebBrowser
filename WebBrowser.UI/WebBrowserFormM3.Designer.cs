@@ -51,9 +51,9 @@ namespace WebBrowser.UI
             this.ForwardButton = new System.Windows.Forms.ToolStripButton();
             this.RefreshButton = new System.Windows.Forms.ToolStripButton();
             this.HomeButton = new System.Windows.Forms.ToolStripButton();
-            this.AddressTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.GoButton = new System.Windows.Forms.ToolStripButton();
             this.BookMarkButton = new System.Windows.Forms.ToolStripButton();
+            this.AddressBox = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -190,6 +190,7 @@ namespace WebBrowser.UI
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(772, 498);
             this.webBrowser1.TabIndex = 3;
+            this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // toolStripContainer1
@@ -213,13 +214,13 @@ namespace WebBrowser.UI
             // toolStrip2
             // 
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddressTextBox,
             this.BackButton,
             this.ForwardButton,
             this.RefreshButton,
             this.HomeButton,
             this.GoButton,
-            this.BookMarkButton});
+            this.BookMarkButton,
+            this.AddressBox});
             this.toolStrip2.Location = new System.Drawing.Point(0, 45);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(772, 25);
@@ -267,14 +268,6 @@ namespace WebBrowser.UI
             this.HomeButton.Text = "HomeButton";
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
-            // AddressTextBox
-            // 
-            this.AddressTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(100, 25);
-            this.AddressTextBox.Text = "Address";
-            this.AddressTextBox.Click += new System.EventHandler(this.toolStripTextBox1_Click);
-            // 
             // GoButton
             // 
             this.GoButton.CheckOnClick = true;
@@ -295,6 +288,14 @@ namespace WebBrowser.UI
             this.BookMarkButton.Size = new System.Drawing.Size(101, 22);
             this.BookMarkButton.Text = "BookMarkButton";
             this.BookMarkButton.Click += new System.EventHandler(this.BookMarkButton_Click);
+            // 
+            // AddressBox
+            // 
+            this.AddressBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AddressBox.Name = "AddressBox";
+            this.AddressBox.Size = new System.Drawing.Size(100, 25);
+            this.AddressBox.Text = "Address";
+            this.AddressBox.Click += new System.EventHandler(this.AddressBox_Click);
             // 
             // WebBrowserFormM3
             // 
@@ -345,8 +346,8 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripButton ForwardButton;
         private System.Windows.Forms.ToolStripButton RefreshButton;
         private System.Windows.Forms.ToolStripButton HomeButton;
-        private System.Windows.Forms.ToolStripTextBox AddressTextBox;
         private System.Windows.Forms.ToolStripButton GoButton;
         private System.Windows.Forms.ToolStripButton BookMarkButton;
+        private System.Windows.Forms.ToolStripTextBox AddressBox;
     }
 }
