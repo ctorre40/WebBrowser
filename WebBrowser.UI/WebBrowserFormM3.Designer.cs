@@ -302,7 +302,7 @@ namespace WebBrowser.UI
             this.Controls.Add(this.webBrowser1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "WebBrowserFormM3";
-            this.Text = "WebBrowserFormM3";
+            this.Text = "Best Web Browser Ever";
             this.Load += new System.EventHandler(this.WebBrowserFormM3_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
