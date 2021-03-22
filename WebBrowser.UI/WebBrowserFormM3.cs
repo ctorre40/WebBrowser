@@ -113,6 +113,7 @@ namespace WebBrowser.UI
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
+            //add code here
 
         }
 
@@ -142,6 +143,11 @@ namespace WebBrowser.UI
         }
 
         private void BookMarkButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
         {
 
         }
