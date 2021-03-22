@@ -128,7 +128,12 @@ namespace WebBrowser.UI
         private void GoButton_Click(object sender, EventArgs e)
         {
             // add code here
-
+            String url = AddressBox.Text;
+            if(Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+            {
+                tabPage1.Text = url;
+                webBrowser1.Navigate(url);
+            }
         }
 
         private void BookMarkButton_Click(object sender, EventArgs e)
