@@ -140,12 +140,12 @@ namespace WebBrowser.UI
         {
 
         }
-
+        
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
         {
 
         }
-
+        
         private void AddressBox_Click(object sender, EventArgs e)
         {
             //address box
@@ -155,7 +155,7 @@ namespace WebBrowser.UI
                 AddressBox.Text = url;
                 webBrowser1.Navigate(url);
             }
-
+            
         }
     }
 }
