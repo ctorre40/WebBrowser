@@ -24,7 +24,7 @@ namespace WebBrowser.UI
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-
+            //add code?
         }
         /**
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -113,7 +113,9 @@ namespace WebBrowser.UI
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
+            //Address Box
             //add code here
+
 
         }
 
@@ -139,7 +141,7 @@ namespace WebBrowser.UI
 
         private void GoButton_Click(object sender, EventArgs e)
         {
-
+            // add code here
         }
 
         private void BookMarkButton_Click(object sender, EventArgs e)

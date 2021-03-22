@@ -213,11 +213,11 @@ namespace WebBrowser.UI
             // toolStrip2
             // 
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddressTextBox,
             this.BackButton,
             this.ForwardButton,
             this.RefreshButton,
             this.HomeButton,
-            this.AddressTextBox,
             this.GoButton,
             this.BookMarkButton});
             this.toolStrip2.Location = new System.Drawing.Point(0, 45);
