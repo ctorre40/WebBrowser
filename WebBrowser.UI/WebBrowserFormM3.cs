@@ -71,6 +71,7 @@ namespace WebBrowser.UI
         private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // add code here
+            MessageBox.Show("Peace out!");
             Application.Exit();
         }
 
