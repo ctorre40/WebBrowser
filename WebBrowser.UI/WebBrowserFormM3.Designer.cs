@@ -294,7 +294,6 @@ namespace WebBrowser.UI
             this.AddressBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(100, 25);
-            this.AddressBox.Text = "Address";
             this.AddressBox.Click += new System.EventHandler(this.AddressBox_Click);
             // 
             // WebBrowserFormM3
