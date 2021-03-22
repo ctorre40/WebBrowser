@@ -103,6 +103,7 @@ namespace WebBrowser.UI
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // add message here
+            MessageBox.Show("Hello there! This is my custom web browser. My name is Casandra. I am from Chicago and I have two cats. My student ID is czt0051. Thanks for checking me out!");
         }
 
         private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
