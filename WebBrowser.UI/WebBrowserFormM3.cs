@@ -71,6 +71,7 @@ namespace WebBrowser.UI
         private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // add code here
+            Application.Exit();
         }
 
         private void toolsToolStripMenuItem_Click(object sender, EventArgs e)
