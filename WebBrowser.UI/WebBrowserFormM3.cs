@@ -157,5 +157,19 @@ namespace WebBrowser.UI
             }
             
         }
+
+        private void AddressBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                String url = AddressBox.Text;
+                if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+                {
+                    AddressBox.Text = url;
+                    webBrowser1.Navigate(url);
+                }
+
+            }
+        }
     }
 }
