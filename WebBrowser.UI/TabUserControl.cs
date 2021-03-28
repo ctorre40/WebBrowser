@@ -79,7 +79,8 @@ namespace WebBrowser.UI
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-
+            
+            webBrowser1.Refresh();
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

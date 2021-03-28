@@ -117,7 +117,8 @@ namespace WebBrowser.UI
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-
+            this.Refresh();
+            Refresh();
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
