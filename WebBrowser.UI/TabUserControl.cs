@@ -15,6 +15,13 @@ namespace WebBrowser.UI
         public TabUserControl()
         {
             InitializeComponent();
+            Stack<string> urlBackList = new Stack<string>();
+            //urlBackList.Push(AddressBox.Text);
+            //String urlBack = urlBackList.ToString();
+
+            Stack<string> urlForWardList = new Stack<string>();
+            //urlForWardList.Push(urlBack);
+
         }
 
         private void TabUserControl_Load(object sender, EventArgs e)
