@@ -21,5 +21,22 @@ namespace WebBrowser.UI
         {
 
         }
+
+        private void UCtoolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            WebBrowserFormM3 AddressBox = new WebBrowserFormM3();
+            
+            String url = AddressBox.Text;
+            if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+            {
+                AddressBox.Text = url;
+                webBrowser1.Navigate(url);
+            }
+        }
     }
 }

@@ -153,6 +153,7 @@ namespace WebBrowser.UI
             if(Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
             {
                 AddressBox.Text = url;
+                tabPage1.Text = url;
                 webBrowser1.Navigate(url);
             }
             
@@ -166,10 +167,16 @@ namespace WebBrowser.UI
                 if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
                 {
                     AddressBox.Text = url;
+                    tabPage1.Text = url;
                     webBrowser1.Navigate(url);
                 }
 
             }
+        }
+
+        private void tabUserControl3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

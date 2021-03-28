@@ -43,7 +43,6 @@ namespace WebBrowser.UI
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -54,6 +53,10 @@ namespace WebBrowser.UI
             this.GoButton = new System.Windows.Forms.ToolStripButton();
             this.BookMarkButton = new System.Windows.Forms.ToolStripButton();
             this.AddressBox = new System.Windows.Forms.ToolStripTextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabUserControl2 = new WebBrowser.UI.TabUserControl();
+            this.tabUserControl1 = new WebBrowser.UI.TabUserControl();
+            this.tabUserControl3 = new WebBrowser.UI.TabUserControl();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -171,17 +174,6 @@ namespace WebBrowser.UI
             this.tabControl1.Size = new System.Drawing.Size(772, 21);
             this.tabControl1.TabIndex = 2;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(764, 0);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -297,11 +289,47 @@ namespace WebBrowser.UI
             this.AddressBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBox_KeyDown);
             this.AddressBox.Click += new System.EventHandler(this.AddressBox_Click);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(764, 0);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabUserControl2
+            // 
+            this.tabUserControl2.Location = new System.Drawing.Point(0, 73);
+            this.tabUserControl2.Name = "tabUserControl2";
+            this.tabUserControl2.Size = new System.Drawing.Size(772, 387);
+            this.tabUserControl2.TabIndex = 7;
+            // 
+            // tabUserControl1
+            // 
+            this.tabUserControl1.Location = new System.Drawing.Point(572, 174);
+            this.tabUserControl1.Name = "tabUserControl1";
+            this.tabUserControl1.Size = new System.Drawing.Size(373, 258);
+            this.tabUserControl1.TabIndex = 6;
+            // 
+            // tabUserControl3
+            // 
+            this.tabUserControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabUserControl3.Location = new System.Drawing.Point(0, 70);
+            this.tabUserControl3.Name = "tabUserControl3";
+            this.tabUserControl3.Size = new System.Drawing.Size(772, 428);
+            this.tabUserControl3.TabIndex = 8;
+            this.tabUserControl3.Load += new System.EventHandler(this.tabUserControl3_Load);
+            // 
             // WebBrowserFormM3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 498);
+            this.Controls.Add(this.tabUserControl3);
+            this.Controls.Add(this.tabUserControl2);
+            this.Controls.Add(this.tabUserControl1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.tabControl1);
@@ -326,7 +354,6 @@ namespace WebBrowser.UI
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newTabToolStripMenuItem;
@@ -348,6 +375,10 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripButton BookMarkButton;
         private System.Windows.Forms.ToolStripTextBox AddressBox;
         public System.Windows.Forms.TabControl tabControl1;
-        public System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        public System.Windows.Forms.TabPage tabPage1;
+        private TabUserControl tabUserControl1;
+        private TabUserControl tabUserControl2;
+        private TabUserControl tabUserControl3;
     }
 }
