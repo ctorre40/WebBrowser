@@ -182,10 +182,10 @@ namespace WebBrowser.UI
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 70);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 45);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(772, 428);
+            this.webBrowser1.Size = new System.Drawing.Size(772, 461);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
@@ -209,6 +209,8 @@ namespace WebBrowser.UI
             // 
             // toolStrip2
             // 
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BackButton,
             this.ForwardButton,
@@ -219,7 +221,7 @@ namespace WebBrowser.UI
             this.AddressBox});
             this.toolStrip2.Location = new System.Drawing.Point(0, 45);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(772, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(596, 25);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             this.toolStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip2_ItemClicked);
@@ -306,9 +308,10 @@ namespace WebBrowser.UI
             // tabUserControl5
             // 
             this.tabUserControl5.AutoSize = true;
-            this.tabUserControl5.Location = new System.Drawing.Point(4, 46);
+            this.tabUserControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabUserControl5.Location = new System.Drawing.Point(0, 45);
             this.tabUserControl5.Name = "tabUserControl5";
-            this.tabUserControl5.Size = new System.Drawing.Size(768, 414);
+            this.tabUserControl5.Size = new System.Drawing.Size(772, 461);
             this.tabUserControl5.TabIndex = 10;
             this.tabUserControl5.Load += new System.EventHandler(this.tabUserControl5_Load);
             // 
@@ -338,7 +341,7 @@ namespace WebBrowser.UI
             this.tabUserControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabUserControl3.Location = new System.Drawing.Point(0, 0);
             this.tabUserControl3.Name = "tabUserControl3";
-            this.tabUserControl3.Size = new System.Drawing.Size(772, 498);
+            this.tabUserControl3.Size = new System.Drawing.Size(772, 506);
             this.tabUserControl3.TabIndex = 8;
             this.tabUserControl3.Load += new System.EventHandler(this.tabUserControl3_Load);
             // 
@@ -346,17 +349,17 @@ namespace WebBrowser.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 498);
+            this.ClientSize = new System.Drawing.Size(772, 506);
             this.Controls.Add(this.tabUserControl5);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.tabUserControl4);
             this.Controls.Add(this.tabUserControl2);
             this.Controls.Add(this.tabUserControl1);
-            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabUserControl3);
+            this.Controls.Add(this.toolStrip2);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "WebBrowserFormM3";
             this.Text = "Best Web Browser Ever";
