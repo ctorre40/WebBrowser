@@ -12,37 +12,19 @@ namespace WebBrowser.UI
 {
     public partial class TabUserControl : UserControl
     {
-        //Stack<string> urlBackList = new Stack<string>();
-
+        Stack<string> urlBackList = new Stack<string>();
+        Stack<string> urlForwardList = new Stack<string>();
 
         public TabUserControl()
         {
             InitializeComponent();
-       
-
+            
         }
 
         private void TabUserControl_Load(object sender, EventArgs e)
         {
 
         }
-
-        //private void UCtoolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        //{
-
-        //}
-
-        //private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        //{
-        //    WebBrowserFormM3 AddressBox = new WebBrowserFormM3();
-
-        //    String url = AddressBox.Text;
-        //    if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
-        //    {
-        //        AddressBox.Text = url;
-        //        webBrowser1.Navigate(url);
-        //    }
-        //}
 
         private void AddressBox_Click(object sender, EventArgs e)
         {
@@ -53,10 +35,10 @@ namespace WebBrowser.UI
             {
                 AddressBox.Text = url;
                 webBrowser1.Navigate(url);
-            }
+                string oldUrl = url;
+                urlBackList.Push(oldUrl);
 
-            //Stack<string> urlBackList = new Stack<string>();
-            //urlBackList.Push(AddressBox.Text);
+            }
         }
 
         private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -72,38 +54,31 @@ namespace WebBrowser.UI
             {
                 tabPage1.Text = url;
                 webBrowser1.Navigate(url);
+                string oldUrl = url;
+                urlBackList.Push(oldUrl);
+
             }
 
-            //Stack<string> urlBackList = new Stack<string>();
-            //urlBackList.Push(AddressBox.Text);
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            Stack<string> urlBackList = new Stack<string>();
-            Stack<string> urlForwardList = new Stack<string>();
-            urlForwardList.Push(AddressBox.Text);
-            urlBackList.Pop();
-            string url = urlBackList.ToString();
-            webBrowser1.Navigate(url);
+            
+            String saveTheUrl = AddressBox.Text;
+            urlForwardList.Push(saveTheUrl); //stores the current url into the forward stack for later usage
+            string bringBackUrl = urlBackList.Pop();
+            webBrowser1.Navigate(bringBackUrl);
 
         }
 
         private void ForwardButton_Click(object sender, EventArgs e)
         {
-            Stack<string> urlBackList = new Stack<string>();
-            Stack<string> urlForwardList = new Stack<string>();
-            urlBackList.Push(AddressBox.Text);
-            urlForwardList.Pop();
-            string url = urlForwardList.ToString();
-            webBrowser1.Navigate(url);
-            //urlBackList.Push(AddressBox.Text);
-            //Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
-            //urlForWardList.Pop();
-            //String url = urlForWardList.ToString();
-            //webBrowser1.Navigate(url);
-
-
+            String byeByeUrl = AddressBox.Text;
+            urlBackList.Push(byeByeUrl); //sends the current url to back list 
+            string helloAgain = urlForwardList.Pop();
+            webBrowser1.Navigate(helloAgain);
+            
         }
 
         private void RefreshButton_Click(object sender, EventArgs e)
@@ -144,12 +119,13 @@ namespace WebBrowser.UI
                     AddressBox.Text = url;
                     tabPage1.Text = url;
                     webBrowser1.Navigate(url);
+                    string oldUrl = url;
+                    urlBackList.Push(oldUrl);
+
                 }
 
             }
 
-            //Stack<string> urlBackList = new Stack<string>();
-            //urlBackList.Push(AddressBox.Text);
         }
     }
 }
