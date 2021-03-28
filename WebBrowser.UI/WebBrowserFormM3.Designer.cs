@@ -302,6 +302,7 @@ namespace WebBrowser.UI
             // 
             // tabUserControl5
             // 
+            this.tabUserControl5.AutoSize = true;
             this.tabUserControl5.Location = new System.Drawing.Point(4, 46);
             this.tabUserControl5.Name = "tabUserControl5";
             this.tabUserControl5.Size = new System.Drawing.Size(768, 414);
@@ -399,6 +400,6 @@ namespace WebBrowser.UI
         private TabUserControl tabUserControl2;
         private TabUserControl tabUserControl3;
         private TabUserControl tabUserControl4;
-        private TabUserControl tabUserControl5;
+        public TabUserControl tabUserControl5;
     }
 }

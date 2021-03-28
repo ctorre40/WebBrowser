@@ -57,6 +57,7 @@ namespace WebBrowser.UI
             this.toolStrip2.Size = new System.Drawing.Size(757, 25);
             this.toolStrip2.TabIndex = 6;
             this.toolStrip2.Text = "toolStrip2";
+            this.toolStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip2_ItemClicked);
             // 
             // BackButton
             // 
@@ -66,6 +67,7 @@ namespace WebBrowser.UI
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(72, 22);
             this.BackButton.Text = "BackButton";
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // ForwardButton
             // 
@@ -75,6 +77,7 @@ namespace WebBrowser.UI
             this.ForwardButton.Name = "ForwardButton";
             this.ForwardButton.Size = new System.Drawing.Size(90, 22);
             this.ForwardButton.Text = "ForwardButton";
+            this.ForwardButton.Click += new System.EventHandler(this.ForwardButton_Click);
             // 
             // RefreshButton
             // 
@@ -84,6 +87,7 @@ namespace WebBrowser.UI
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(86, 22);
             this.RefreshButton.Text = "RefreshButton";
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // HomeButton
             // 
@@ -93,6 +97,7 @@ namespace WebBrowser.UI
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(80, 22);
             this.HomeButton.Text = "HomeButton";
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // GoButton
             // 
@@ -101,8 +106,9 @@ namespace WebBrowser.UI
             this.GoButton.Image = ((System.Drawing.Image)(resources.GetObject("GoButton.Image")));
             this.GoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(62, 19);
+            this.GoButton.Size = new System.Drawing.Size(62, 22);
             this.GoButton.Text = "GoButton";
+            this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
             // BookMarkButton
             // 
@@ -110,14 +116,17 @@ namespace WebBrowser.UI
             this.BookMarkButton.Image = ((System.Drawing.Image)(resources.GetObject("BookMarkButton.Image")));
             this.BookMarkButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BookMarkButton.Name = "BookMarkButton";
-            this.BookMarkButton.Size = new System.Drawing.Size(101, 19);
+            this.BookMarkButton.Size = new System.Drawing.Size(101, 22);
             this.BookMarkButton.Text = "BookMarkButton";
+            this.BookMarkButton.Click += new System.EventHandler(this.BookMarkButton_Click);
             // 
             // AddressBox
             // 
             this.AddressBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(100, 25);
+            this.AddressBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBox_KeyDown);
+            this.AddressBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AddressBox_KeyUp);
             this.AddressBox.Click += new System.EventHandler(this.AddressBox_Click);
             // 
             // webBrowser1
@@ -129,6 +138,7 @@ namespace WebBrowser.UI
             this.webBrowser1.Size = new System.Drawing.Size(757, 448);
             this.webBrowser1.TabIndex = 7;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted_1);
             // 
             // TabUserControl
             // 
@@ -153,8 +163,8 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripButton HomeButton;
         private System.Windows.Forms.ToolStripButton GoButton;
         private System.Windows.Forms.ToolStripButton BookMarkButton;
-        private System.Windows.Forms.ToolStripTextBox AddressBox;
         public System.Windows.Forms.WebBrowser webBrowser1;
         public System.Windows.Forms.ToolStrip toolStrip2;
+        public System.Windows.Forms.ToolStripTextBox AddressBox;
     }
 }

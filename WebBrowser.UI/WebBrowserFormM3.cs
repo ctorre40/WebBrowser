@@ -24,7 +24,7 @@ namespace WebBrowser.UI
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            //add code?
+  
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -176,6 +176,9 @@ namespace WebBrowser.UI
 
         private void tabUserControl3_Load(object sender, EventArgs e)
         {
+            TabUserControl AddressBox = new TabUserControl();
+            tabPage1.Text = AddressBox.Text;
+            // need to figure out how to get the tab page to take on the name of the url we are on
 
         }
 
@@ -188,6 +191,8 @@ namespace WebBrowser.UI
                 tabPage1.Text = url;
                 webBrowser1.Navigate(url);
             }
+            // need to figure out how to get the tab page to take on the name of the url we are on
+
         }
     }
 }
