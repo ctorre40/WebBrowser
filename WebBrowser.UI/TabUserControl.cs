@@ -29,8 +29,20 @@ namespace WebBrowser.UI
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            WebBrowserFormM3 AddressBox = new WebBrowserFormM3();
+            //WebBrowserFormM3 AddressBox = new WebBrowserFormM3();
             
+            //String url = AddressBox.Text;
+            //if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
+            //{
+            //    AddressBox.Text = url;
+            //    UCwebBrowser1.Navigate(url);
+            //}
+        }
+
+        private void AddressBox_Click(object sender, EventArgs e)
+        {
+            WebBrowserFormM3 AddressBox = new WebBrowserFormM3();
+
             String url = AddressBox.Text;
             if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
             {
