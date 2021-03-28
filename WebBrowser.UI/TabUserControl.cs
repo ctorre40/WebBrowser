@@ -12,15 +12,16 @@ namespace WebBrowser.UI
 {
     public partial class TabUserControl : UserControl
     {
+        Stack<string> urlBackList = new Stack<string>();
+        //urlBackList.Push(AddressBox.Text);
+        //String urlBack = urlBackList.ToString();
+
+        //Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
+
         public TabUserControl()
         {
             InitializeComponent();
-            Stack<string> urlBackList = new Stack<string>();
-            //urlBackList.Push(AddressBox.Text);
-            //String urlBack = urlBackList.ToString();
-
-            Stack<string> urlForWardList = new Stack<string>();
-            //urlForWardList.Push(urlBack);
+       
 
         }
 
@@ -76,11 +77,23 @@ namespace WebBrowser.UI
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-
+            Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
+            urlForWardList.Push(AddressBox.Text);
+            urlBackList.Pop();
+            String url = urlBackList.ToString();
+            webBrowser1.Navigate(url);
+            
         }
 
         private void ForwardButton_Click(object sender, EventArgs e)
         {
+            //Stack<string> urlBackList = new Stack<string>();
+            urlBackList.Push(AddressBox.Text);
+            Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
+            urlForWardList.Pop();
+            String url = urlForWardList.ToString();
+            webBrowser1.Navigate(url);
+
 
         }
 
