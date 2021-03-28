@@ -13,10 +13,7 @@ namespace WebBrowser.UI
     public partial class TabUserControl : UserControl
     {
         //Stack<string> urlBackList = new Stack<string>();
-        //urlBackList.Push(AddressBox.Text);
-        //String urlBack = urlBackList.ToString();
 
-        //Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
 
         public TabUserControl()
         {
@@ -77,30 +74,34 @@ namespace WebBrowser.UI
                 webBrowser1.Navigate(url);
             }
 
-            Stack<string> urlBackList = new Stack<string>();
-            urlBackList.Push(AddressBox.Text);
+            //Stack<string> urlBackList = new Stack<string>();
+            //urlBackList.Push(AddressBox.Text);
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
             Stack<string> urlBackList = new Stack<string>();
-            urlBackList.Push(AddressBox.Text);
-            Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
-            urlForWardList.Push(AddressBox.Text);
+            Stack<string> urlForwardList = new Stack<string>();
+            urlForwardList.Push(AddressBox.Text);
             urlBackList.Pop();
-            String url = urlBackList.ToString();
+            string url = urlBackList.ToString();
             webBrowser1.Navigate(url);
-            
+
         }
 
         private void ForwardButton_Click(object sender, EventArgs e)
         {
             Stack<string> urlBackList = new Stack<string>();
+            Stack<string> urlForwardList = new Stack<string>();
             urlBackList.Push(AddressBox.Text);
-            Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
-            urlForWardList.Pop();
-            String url = urlForWardList.ToString();
+            urlForwardList.Pop();
+            string url = urlForwardList.ToString();
             webBrowser1.Navigate(url);
+            //urlBackList.Push(AddressBox.Text);
+            //Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
+            //urlForWardList.Pop();
+            //String url = urlForWardList.ToString();
+            //webBrowser1.Navigate(url);
 
 
         }
@@ -147,8 +148,8 @@ namespace WebBrowser.UI
 
             }
 
-            Stack<string> urlBackList = new Stack<string>();
-            urlBackList.Push(AddressBox.Text);
+            //Stack<string> urlBackList = new Stack<string>();
+            //urlBackList.Push(AddressBox.Text);
         }
     }
 }

@@ -53,8 +53,6 @@ namespace WebBrowser.UI
         {
             // Removes the selected tab:  
             tabControl1.TabPages.Remove(tabControl1.SelectedTab);
-            // Removes all the tabs:  
-            //tabControl1.TabPages.Clear();
         }
 
         private void savePageAsHTMLToolStripMenuItem_Click(object sender, EventArgs e)
