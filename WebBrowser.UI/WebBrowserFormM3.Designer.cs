@@ -326,9 +326,7 @@ namespace WebBrowser.UI
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newTabToolStripMenuItem;
@@ -349,5 +347,7 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripButton GoButton;
         private System.Windows.Forms.ToolStripButton BookMarkButton;
         private System.Windows.Forms.ToolStripTextBox AddressBox;
+        public System.Windows.Forms.TabControl tabControl1;
+        public System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

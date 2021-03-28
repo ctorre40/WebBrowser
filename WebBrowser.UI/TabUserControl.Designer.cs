@@ -37,6 +37,7 @@ namespace WebBrowser.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "TabUserControl";
             this.Size = new System.Drawing.Size(373, 258);
+            this.Load += new System.EventHandler(this.TabUserControl_Load);
             this.ResumeLayout(false);
 
         }
