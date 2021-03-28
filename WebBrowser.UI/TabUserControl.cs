@@ -12,7 +12,7 @@ namespace WebBrowser.UI
 {
     public partial class TabUserControl : UserControl
     {
-        Stack<string> urlBackList = new Stack<string>();
+        //Stack<string> urlBackList = new Stack<string>();
         //urlBackList.Push(AddressBox.Text);
         //String urlBack = urlBackList.ToString();
 
@@ -57,6 +57,9 @@ namespace WebBrowser.UI
                 AddressBox.Text = url;
                 webBrowser1.Navigate(url);
             }
+
+            //Stack<string> urlBackList = new Stack<string>();
+            //urlBackList.Push(AddressBox.Text);
         }
 
         private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -73,10 +76,15 @@ namespace WebBrowser.UI
                 tabPage1.Text = url;
                 webBrowser1.Navigate(url);
             }
+
+            Stack<string> urlBackList = new Stack<string>();
+            urlBackList.Push(AddressBox.Text);
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            Stack<string> urlBackList = new Stack<string>();
+            urlBackList.Push(AddressBox.Text);
             Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
             urlForWardList.Push(AddressBox.Text);
             urlBackList.Pop();
@@ -87,7 +95,7 @@ namespace WebBrowser.UI
 
         private void ForwardButton_Click(object sender, EventArgs e)
         {
-            //Stack<string> urlBackList = new Stack<string>();
+            Stack<string> urlBackList = new Stack<string>();
             urlBackList.Push(AddressBox.Text);
             Stack<string> urlForWardList = new Stack<string>(urlBackList.ToArray());
             urlForWardList.Pop();
@@ -138,6 +146,9 @@ namespace WebBrowser.UI
                 }
 
             }
+
+            Stack<string> urlBackList = new Stack<string>();
+            urlBackList.Push(AddressBox.Text);
         }
     }
 }
