@@ -44,12 +44,14 @@ namespace WebBrowser.UI
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            string title = "TabPage " + (tabControl1.TabCount + 1).ToString();
+            TabPage myTabPage = new TabPage(title);
+            tabControl1.TabPages.Add(myTabPage);
         }
 
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void savePageAsHTMLToolStripMenuItem_Click(object sender, EventArgs e)
@@ -194,6 +196,20 @@ namespace WebBrowser.UI
             }
             // need to figure out how to get the tab page to take on the name of the url we are on
 
+        }
+
+        private void WebBrowserFormM3_KeyDown(object sender, KeyEventArgs e)
+        {
+            string title = "TabPage " + (tabControl1.TabCount + 1).ToString();
+            TabPage myTabPage = new TabPage(title);
+            tabControl1.TabPages.Add(myTabPage);
+        }
+
+        private void menuStrip1_KeyDown(object sender, KeyEventArgs e)
+        {
+            string title = "TabPage " + (tabControl1.TabCount + 1).ToString();
+            TabPage myTabPage = new TabPage(title);
+            tabControl1.TabPages.Add(myTabPage);
         }
     }
 }

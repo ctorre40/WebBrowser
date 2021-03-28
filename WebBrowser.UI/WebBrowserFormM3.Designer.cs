@@ -77,6 +77,7 @@ namespace WebBrowser.UI
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            this.menuStrip1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.menuStrip1_KeyDown);
             // 
             // fileToolStripMenuItem
             // 
@@ -360,6 +361,7 @@ namespace WebBrowser.UI
             this.Name = "WebBrowserFormM3";
             this.Text = "Best Web Browser Ever";
             this.Load += new System.EventHandler(this.WebBrowserFormM3_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WebBrowserFormM3_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -377,8 +379,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newTabToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closeCurrentTabToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem savePageAsHTMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printPageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitWebBrowserToolStripMenuItem;
@@ -403,5 +403,7 @@ namespace WebBrowser.UI
         private TabUserControl tabUserControl3;
         private TabUserControl tabUserControl4;
         public TabUserControl tabUserControl5;
+        public System.Windows.Forms.ToolStripMenuItem newTabToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem closeCurrentTabToolStripMenuItem;
     }
 }
