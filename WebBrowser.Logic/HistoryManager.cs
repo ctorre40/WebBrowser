@@ -12,12 +12,12 @@ namespace WebBrowser.Logic
     // must be static
     public class HistoryManager
     {
-        public static void AddItem(HistoryItem hItem)
+        public static void AddItem(HistoryItem item)
         {
             // should add history item to dB and get all history items from the dB
             //accepts the variables from history
             var adapter = new HistoryTableAdapter();
-            adapter.Insert(hItem.URL, hItem.Title, hItem.Date); //.ToString("mm/dd/yyy hh::ss"));
+            adapter.Insert(item.URL, item.Title, item.Date); //.ToString("mm/dd/yyy hh::ss"));
         }
 
         public static List<HistoryItem> GetHistoryItems()
@@ -28,12 +28,12 @@ namespace WebBrowser.Logic
 
             foreach(var row in rows)
             {
-                var hItem = new HistoryItem();
-                hItem.URL = row.URL;
-                hItem.Title = row.Title;
-                hItem.Date = row.Date;
+                var item = new HistoryItem();
+                item.URL = row.URL;
+                item.Title = row.Title;
+                item.Date = row.Date;
 
-                results.Add(hItem);
+                results.Add(item);
             }
             return results;
         }

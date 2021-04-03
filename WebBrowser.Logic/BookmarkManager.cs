@@ -9,10 +9,10 @@ namespace WebBrowser.Logic
 {
     public class BookmarkManager
     {
-        public static void AddItem(BookmarkItem bItem)
+        public static void AddItem(BookmarkItem item)
         {
             var adapter = new BookmarksTableAdapter();
-            adapter.Insert(bItem.URL, bItem.Title); 
+            adapter.Insert(item.URL, item.Title); 
         }
 
         public static List<BookmarkItem> GetItems()
@@ -23,11 +23,11 @@ namespace WebBrowser.Logic
 
             foreach(var row in rows)
             {
-                var bItem = new BookmarkItem();
-                bItem.URL = row.Title;
-                bItem.Title = row.Title;
+                var item = new BookmarkItem();
+                item.URL = row.Title;
+                item.Title = row.Title;
 
-                results.Add(bItem);
+                results.Add(item);
             }
             return results;
         }

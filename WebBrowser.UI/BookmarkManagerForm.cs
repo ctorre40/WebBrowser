@@ -22,7 +22,13 @@ namespace WebBrowser.UI
         {
             // TODO: This line of code loads data into the 'dataDBDataSet1.Bookmarks' table. You can move, or remove it, as needed.
             this.bookmarksTableAdapter.Fill(this.dataDBDataSet1.Bookmarks);
+            var bItems = new BookmarkManager.GetItems();
+            listBox1.Items.Clear();
 
+            foreach(var item in bItems)
+            {
+                listBox1.Items.Add(string.Format("{0} - ({1})", item.Title, item.URL));
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -44,7 +44,7 @@ namespace WebBrowser.UI
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(47, 102);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.Size = new System.Drawing.Size(360, 95);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
