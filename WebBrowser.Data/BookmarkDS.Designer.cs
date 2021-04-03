@@ -914,8 +914,8 @@ namespace WebBrowser.Data.BookmarkDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string URL, string Title) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
+        public virtual int Insert(string URL, string Title) {
+            //this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
             if ((URL == null)) {
                 throw new global::System.ArgumentNullException("URL");
             }

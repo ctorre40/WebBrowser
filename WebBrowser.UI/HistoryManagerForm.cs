@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebBrowser.Logic;
-//using WebBrowser.HistoryDataSetTableAdapters;
 
 namespace WebBrowser.UI
 {
@@ -26,8 +25,18 @@ namespace WebBrowser.UI
 
         private void HistoryManagerForm_Load(object sender, EventArgs e)
         {
+            // might need to remove this data source
             // TODO: This line of code loads data into the 'dataDBDataSet.History' table. You can move, or remove it, as needed.
             this.historyTableAdapter.Fill(this.dataDBDataSet.History);
+
+            var items = HistoryManager.GetHistoryItems();
+            listBox1.Items.Clear();
+
+            foreach(var item in items)
+            {
+                listBox1.Items.Add(string.Format("[{0}], - {1} - ({2})", item.Date, item.Title, item.URL));
+            }
+
 
         }
     }

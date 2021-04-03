@@ -20,12 +20,13 @@ namespace WebBrowser.UI
 
         private void BookmarkManagerForm_Load(object sender, EventArgs e)
         {
+            //might need to remove this data source
             // TODO: This line of code loads data into the 'dataDBDataSet1.Bookmarks' table. You can move, or remove it, as needed.
             this.bookmarksTableAdapter.Fill(this.dataDBDataSet1.Bookmarks);
-            var bItems = new BookmarkManager.GetItems();
+            var items = BookmarkManager.GetBookmarkItems();
             listBox1.Items.Clear();
 
-            foreach(var item in bItems)
+            foreach(var item in items)
             {
                 listBox1.Items.Add(string.Format("{0} - ({1})", item.Title, item.URL));
             }

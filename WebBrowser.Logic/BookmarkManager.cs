@@ -15,7 +15,7 @@ namespace WebBrowser.Logic
             adapter.Insert(item.URL, item.Title); 
         }
 
-        public static List<BookmarkItem> GetItems()
+        public static List<BookmarkItem> GetBookmarkItems()
         {
             var adapter = new BookmarksTableAdapter();
             var results = new List<BookmarkItem>();
