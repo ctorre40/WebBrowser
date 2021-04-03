@@ -379,10 +379,10 @@ namespace WebBrowser.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BookmarksRow AddBookmarksRow(int Id, string URL, string Title) {
+            public BookmarksRow AddBookmarksRow(string URL, string Title) {
                 BookmarksRow rowBookmarksRow = ((BookmarksRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        null,
                         URL,
                         Title};
                 rowBookmarksRow.ItemArray = columnValuesArray;
@@ -430,6 +430,9 @@ namespace WebBrowser.Data {
                 base.Columns.Add(this.columnTitle);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnURL.AllowDBNull = false;
