@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookmarItem.cs" />
+    <Compile Include="BookmarkItem.cs" />
     <Compile Include="BookmarkManager.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="HistoryItem.cs" />

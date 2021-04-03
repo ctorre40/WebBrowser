@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace WebBrowser.Logic
 {
-    class BookmarItem
+    class BookmarkItem
     {
+        public string URL = "";
+        public string Title = "";
     }
 }
