@@ -29,17 +29,38 @@ namespace WebBrowser.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.dataDBDataSet = new WebBrowser.UI.dataDBDataSet();
+            this.historyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.historyTableAdapter = new WebBrowser.UI.dataDBDataSetTableAdapters.HistoryTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
             // 
+            this.listBox1.DataSource = this.historyBindingSource;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(47, 102);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // dataDBDataSet
+            // 
+            this.dataDBDataSet.DataSetName = "dataDBDataSet";
+            this.dataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // historyBindingSource
+            // 
+            this.historyBindingSource.DataMember = "History";
+            this.historyBindingSource.DataSource = this.dataDBDataSet;
+            // 
+            // historyTableAdapter
+            // 
+            this.historyTableAdapter.ClearBeforeFill = true;
             // 
             // HistoryManagerForm
             // 
@@ -49,6 +70,9 @@ namespace WebBrowser.UI
             this.Controls.Add(this.listBox1);
             this.Name = "HistoryManagerForm";
             this.Text = "HistoryManagerForm";
+            this.Load += new System.EventHandler(this.HistoryManagerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -56,5 +80,8 @@ namespace WebBrowser.UI
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
+        private dataDBDataSet dataDBDataSet;
+        private System.Windows.Forms.BindingSource historyBindingSource;
+        private dataDBDataSetTableAdapters.HistoryTableAdapter historyTableAdapter;
     }
 }

@@ -52,6 +52,16 @@
     <Compile Include="BookmarkManagerForm.Designer.cs">
       <DependentUpon>BookmarkManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="dataDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dataDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +109,28 @@
     <EmbeddedResource Include="WebBrowserFormM3.resx">
       <DependentUpon>WebBrowserFormM3.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dataDBDataSet.xsc">
+      <DependentUpon>dataDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dataDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataDBDataSet.xss">
+      <DependentUpon>dataDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dataDBDataSet1.xsc">
+      <DependentUpon>dataDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dataDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataDBDataSet1.xss">
+      <DependentUpon>dataDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -23,22 +23,12 @@ namespace WebBrowser.UI
         {
 
         }
-        public static List<HistoryItem> GetHistoryItems()
+
+        private void HistoryManagerForm_Load(object sender, EventArgs e)
         {
-            var adapter = new HistoryTableAdapter();
-            var results = new List<HistoryItem>();
-            var rows = adapter.GetData();
+            // TODO: This line of code loads data into the 'dataDBDataSet.History' table. You can move, or remove it, as needed.
+            this.historyTableAdapter.Fill(this.dataDBDataSet.History);
 
-            foreach (var row in rows)
-            {
-                var hItem = new HistoryItem();
-                hItem.URL = row.URL;
-                hItem.Title = row.Title;
-                hItem.Date = row.Date;
-
-                results.Add(hItem);
-            }
-            return results;
         }
     }
 }
