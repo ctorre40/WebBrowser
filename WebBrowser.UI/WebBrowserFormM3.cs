@@ -79,7 +79,7 @@ namespace WebBrowser.UI
 
         private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // here we need to implement code
         }
 
         private void fileToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace WebBrowser.UI
 
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // here we need to implement code
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)

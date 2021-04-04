@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
 
 namespace WebBrowser.UI
 {
     public partial class TabUserControl : UserControl
     {
-        Stack<string> urlBackList = new Stack<string>();
-        Stack<string> urlForwardList = new Stack<string>();
+        //Stack<string> urlBackList = new Stack<string>();
+        //Stack<string> urlForwardList = new Stack<string>();
 
         public TabUserControl()
         {
@@ -35,8 +36,11 @@ namespace WebBrowser.UI
             {
                 AddressBox.Text = url;
                 webBrowser1.Navigate(url);
-                string oldUrl = url;
-                urlBackList.Push(oldUrl);
+                HistoryManagerForm addToHistory= new HistoryManagerForm();
+                AddNewUrl();
+                UpdateHistory();
+                //string oldUrl = url;
+                //urlBackList.Push(oldUrl);
 
             }
         }
@@ -54,8 +58,10 @@ namespace WebBrowser.UI
             {
                 tabPage1.Text = url;
                 webBrowser1.Navigate(url);
-                string oldUrl = url;
-                urlBackList.Push(oldUrl);
+                AddNewUrl();
+                UpdateHistory();
+                //string oldUrl = url;
+                //urlBackList.Push(oldUrl);
 
             }
 
@@ -98,7 +104,7 @@ namespace WebBrowser.UI
 
         private void BookMarkButton_Click(object sender, EventArgs e)
         {
-
+            //here we need to implement code
         }
 
         private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -123,8 +129,10 @@ namespace WebBrowser.UI
                     AddressBox.Text = url;
                     tabPage1.Text = url;
                     webBrowser1.Navigate(url);
-                    string oldUrl = url;
-                    urlBackList.Push(oldUrl);
+                    AddNewUrl();
+                    UpdateHistory();
+                    //string oldUrl = url;
+                    //urlBackList.Push(oldUrl);
 
                 }
 
