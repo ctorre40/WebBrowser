@@ -64,21 +64,25 @@ namespace WebBrowser.UI
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            
+            webBrowser1.GoBack();
+
+            /**
             String saveTheUrl = AddressBox.Text;
             urlForwardList.Push(saveTheUrl); //stores the current url into the forward stack for later usage
             string bringBackUrl = urlBackList.Pop();
             webBrowser1.Navigate(bringBackUrl);
-
+            */
         }
 
         private void ForwardButton_Click(object sender, EventArgs e)
         {
+            webBrowser1.GoForward();
+            /**
             String byeByeUrl = AddressBox.Text;
             urlBackList.Push(byeByeUrl); //sends the current url to back list 
             string helloAgain = urlForwardList.Pop();
             webBrowser1.Navigate(helloAgain);
-            
+            */
         }
 
         private void RefreshButton_Click(object sender, EventArgs e)

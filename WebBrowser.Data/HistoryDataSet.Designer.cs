@@ -389,7 +389,7 @@ namespace WebBrowser.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public HistoryRow AddHistoryRow(string URL, string Title, string Date) {
+            public HistoryRow AddHistoryRow(string URL, string Title, System.DateTime Date) {
                 HistoryRow rowHistoryRow = ((HistoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -440,7 +440,7 @@ namespace WebBrowser.Data {
                 base.Columns.Add(this.columnURL);
                 this.columnTitle = new global::System.Data.DataColumn("Title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTitle);
-                this.columnDate = new global::System.Data.DataColumn("Date", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
@@ -455,7 +455,6 @@ namespace WebBrowser.Data {
                 this.columnTitle.AllowDBNull = false;
                 this.columnTitle.MaxLength = 50;
                 this.columnDate.AllowDBNull = false;
-                this.columnDate.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -631,9 +630,9 @@ namespace WebBrowser.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Date {
+            public System.DateTime Date {
                 get {
-                    return ((string)(this[this.tableHistory.DateColumn]));
+                    return ((global::System.DateTime)(this[this.tableHistory.DateColumn]));
                 }
                 set {
                     this[this.tableHistory.DateColumn] = value;
