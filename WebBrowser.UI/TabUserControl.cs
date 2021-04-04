@@ -15,6 +15,8 @@ namespace WebBrowser.UI
     {
         //Stack<string> urlBackList = new Stack<string>();
         //Stack<string> urlForwardList = new Stack<string>();
+        List<HistoryItem> historyItem = new List<HistoryItem>();
+
 
         public TabUserControl()
         {
@@ -36,13 +38,24 @@ namespace WebBrowser.UI
             {
                 AddressBox.Text = url;
                 webBrowser1.Navigate(url);
-                HistoryManagerForm addToHistory= new HistoryManagerForm();
-                AddNewUrl();
+                HistoryManagerForm listBox1= new HistoryManagerForm();
+                
+                AddItem();
                 UpdateHistory();
                 //string oldUrl = url;
                 //urlBackList.Push(oldUrl);
 
             }
+        }
+
+        private void AddItem()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void UpdateHistory()
+        {
+             
         }
 
         private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -58,7 +71,7 @@ namespace WebBrowser.UI
             {
                 tabPage1.Text = url;
                 webBrowser1.Navigate(url);
-                AddNewUrl();
+                AddItem();
                 UpdateHistory();
                 //string oldUrl = url;
                 //urlBackList.Push(oldUrl);
@@ -105,6 +118,9 @@ namespace WebBrowser.UI
         private void BookMarkButton_Click(object sender, EventArgs e)
         {
             //here we need to implement code
+            //TabUserControl AddressBox = new TabUserControl();
+            //HistoryManagerForm listBox = new HistoryManagerForm();
+            
         }
 
         private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -122,14 +138,16 @@ namespace WebBrowser.UI
             if (e.KeyCode == Keys.Enter)
             {
                 WebBrowserFormM3 tabPage1 = new WebBrowserFormM3();
-
+                HistoryManagerForm listBox1 = new HistoryManagerForm();
                 String url = AddressBox.Text;
                 if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
                 {
                     AddressBox.Text = url;
                     tabPage1.Text = url;
                     webBrowser1.Navigate(url);
-                    AddNewUrl();
+
+
+                    AddItem();
                     UpdateHistory();
                     //string oldUrl = url;
                     //urlBackList.Push(oldUrl);

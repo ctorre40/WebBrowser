@@ -20,7 +20,9 @@ namespace WebBrowser.UI
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            WebBrowserFormM3 AddressBox = new WebBrowserFormM3();
+            string url = AddressBox.Text;
+            listBox1.Items.Add(url);
         }
 
         private void HistoryManagerForm_Load(object sender, EventArgs e)
