@@ -15,7 +15,7 @@ namespace WebBrowser.UI
     {
         //Stack<string> urlBackList = new Stack<string>();
         //Stack<string> urlForwardList = new Stack<string>();
-        List<HistoryItem> historyItem = new List<HistoryItem>();
+        //List<HistoryItem> historyItem = new List<HistoryItem>();
 
 
         public TabUserControl()
@@ -38,25 +38,29 @@ namespace WebBrowser.UI
             {
                 AddressBox.Text = url;
                 webBrowser1.Navigate(url);
-                HistoryManagerForm listBox1= new HistoryManagerForm();
-                
-                AddItem();
-                UpdateHistory();
+                //HistoryManagerForm listBox1= new HistoryManagerForm();
+                var item = new HistoryItem();
+                item.URL = AddressBox.Text;
+                item.Title = AddressBox.Text;
+                item.Date = DateTime.Now;
+                HistoryManager.AddItem(item);
+                //AddItem();
+                //UpdateHistory();
                 //string oldUrl = url;
                 //urlBackList.Push(oldUrl);
 
             }
         }
 
-        private void AddItem()
-        {
-            throw new NotImplementedException();
-        }
+        //private void AddItem()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        private void UpdateHistory()
-        {
+        //private void UpdateHistory()
+        //{
              
-        }
+        //}
 
         private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
@@ -71,11 +75,15 @@ namespace WebBrowser.UI
             {
                 tabPage1.Text = url;
                 webBrowser1.Navigate(url);
-                AddItem();
-                UpdateHistory();
+                //AddItem();
+                //UpdateHistory();
                 //string oldUrl = url;
                 //urlBackList.Push(oldUrl);
-
+                var item = new HistoryItem();
+                item.URL = AddressBox.Text;
+                item.Title = AddressBox.Text;
+                item.Date = DateTime.Now;
+                HistoryManager.AddItem(item);
             }
 
 
@@ -120,7 +128,10 @@ namespace WebBrowser.UI
             //here we need to implement code
             //TabUserControl AddressBox = new TabUserControl();
             //HistoryManagerForm listBox = new HistoryManagerForm();
-            
+            var item = new BookmarkItem();
+            item.URL = AddressBox.Text;
+            item.Title = AddressBox.Text;
+            BookmarkManager.AddItem(item);
         }
 
         private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -145,10 +156,14 @@ namespace WebBrowser.UI
                     AddressBox.Text = url;
                     tabPage1.Text = url;
                     webBrowser1.Navigate(url);
+                    var item = new HistoryItem();
+                    item.URL = AddressBox.Text;
+                    item.Title = AddressBox.Text;
+                    item.Date = DateTime.Now;
+                    HistoryManager.AddItem(item);
 
-
-                    AddItem();
-                    UpdateHistory();
+                    //AddItem();
+                    //UpdateHistory();
                     //string oldUrl = url;
                     //urlBackList.Push(oldUrl);
 

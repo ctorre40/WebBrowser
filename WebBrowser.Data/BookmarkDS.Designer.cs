@@ -915,7 +915,7 @@ namespace WebBrowser.Data.BookmarkDSTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string URL, string Title) {
-            //this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
+            //this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id)); // took this out
             if ((URL == null)) {
                 throw new global::System.ArgumentNullException("URL");
             }

@@ -17,7 +17,7 @@ namespace WebBrowser.Logic
             // should add history item to dB and get all history items from the dB
             //accepts the variables from history
             var adapter = new HistoryTableAdapter();
-            adapter.Insert(item.URL, item.Title, item.Date.ToString("mm/dd/yyy hh::ss"));
+            adapter.Insert(item.URL, item.Title, item.Date);//.ToString("mm/dd/yyy hh:ss"));
         }
 
         public static List<HistoryItem> GetHistoryItems()

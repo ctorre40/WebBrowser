@@ -32,7 +32,7 @@ namespace WebBrowser.UI
             this.historyTableAdapter.Fill(this.dataDBDataSet.History);
 
             var items = HistoryManager.GetHistoryItems();
-            listBox1.Items.Clear();
+            //listBox1.Items.Clear();
 
             foreach(var item in items)
             {

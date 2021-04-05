@@ -12,7 +12,7 @@ namespace WebBrowser.Logic
         public static void AddItem(BookmarkItem item)
         {
             var adapter = new BookmarksTableAdapter();
-            adapter.Insert(item.URL, item.Title); 
+            adapter.Insert(item.URL, item.Title); // exception states to put Id in here
         }
 
         public static List<BookmarkItem> GetBookmarkItems()

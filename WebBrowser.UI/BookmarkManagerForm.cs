@@ -24,7 +24,7 @@ namespace WebBrowser.UI
             // TODO: This line of code loads data into the 'dataDBDataSet1.Bookmarks' table. You can move, or remove it, as needed.
             this.bookmarksTableAdapter.Fill(this.dataDBDataSet1.Bookmarks);
             var items = BookmarkManager.GetBookmarkItems();
-            listBox1.Items.Clear();
+            //listBox1.Items.Clear();
 
             foreach(var item in items)
             {
