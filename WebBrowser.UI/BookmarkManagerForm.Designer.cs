@@ -31,32 +31,32 @@ namespace WebBrowser.UI
         {
             this.components = new System.ComponentModel.Container();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.dataDBDataSet1 = new WebBrowser.UI.dataDBDataSet1();
             this.bookmarksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataDBDataSet1 = new WebBrowser.UI.dataDBDataSet1();
             this.bookmarksTableAdapter = new WebBrowser.UI.dataDBDataSet1TableAdapters.BookmarksTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookmarksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDBDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
             // 
-            this.listBox1.DataSource = this.bookmarksBindingSource;
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(38, 129);
+            this.listBox1.Location = new System.Drawing.Point(0, 0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(412, 121);
+            this.listBox1.Size = new System.Drawing.Size(543, 405);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // dataDBDataSet1
-            // 
-            this.dataDBDataSet1.DataSetName = "dataDBDataSet1";
-            this.dataDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bookmarksBindingSource
             // 
             this.bookmarksBindingSource.DataMember = "Bookmarks";
             this.bookmarksBindingSource.DataSource = this.dataDBDataSet1;
+            // 
+            // dataDBDataSet1
+            // 
+            this.dataDBDataSet1.DataSetName = "dataDBDataSet1";
+            this.dataDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bookmarksTableAdapter
             // 
@@ -71,8 +71,8 @@ namespace WebBrowser.UI
             this.Name = "BookmarkManagerForm";
             this.Text = "BookmarkManagerForm";
             this.Load += new System.EventHandler(this.BookmarkManagerForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookmarksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDBDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

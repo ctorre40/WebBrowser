@@ -92,7 +92,7 @@ namespace WebBrowser.UI
 
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HistoryManagerForm listBox1 = new HistoryManagerForm();
+            BookmarkManagerForm listBox1 = new BookmarkManagerForm();
             listBox1.ShowDialog();
         }
 

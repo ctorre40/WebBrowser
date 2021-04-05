@@ -22,7 +22,7 @@ namespace WebBrowser.UI
         {
             //might need to remove this data source
             // TODO: This line of code loads data into the 'dataDBDataSet1.Bookmarks' table. You can move, or remove it, as needed.
-            this.bookmarksTableAdapter.Fill(this.dataDBDataSet1.Bookmarks);
+            //this.bookmarksTableAdapter.Fill(this.dataDBDataSet1.Bookmarks);
             var items = BookmarkManager.GetBookmarkItems();
             //listBox1.Items.Clear();
 
@@ -34,7 +34,15 @@ namespace WebBrowser.UI
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            WebBrowserFormM3 AddressBox = new WebBrowserFormM3();
+            string url = AddressBox.Text;
+            listBox1.Items.Add(url);
 
+            //if (!listBox1.Contains(url))
+            //{
+            //    listBox1.Items.Add(url);
+
+            //}
         }
     }
 }

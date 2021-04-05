@@ -56,6 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookmarkDS.cs">
+      <DependentUpon>BookmarkDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BookmarkDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
