@@ -193,6 +193,7 @@ namespace WebBrowser.UI
         private void tabUserControl5_Load(object sender, EventArgs e)
         {
             String url = AddressBox.Text;
+            
             if (Uri.IsWellFormedUriString(url, UriKind.RelativeOrAbsolute))
             {
                 AddressBox.Text = url;
