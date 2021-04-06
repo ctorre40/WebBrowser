@@ -44,6 +44,7 @@ namespace WebBrowser.UI
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabUserControl5 = new WebBrowser.UI.TabUserControl();
+            this.tabUserControl1 = new WebBrowser.UI.TabUserControl();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -182,11 +183,20 @@ namespace WebBrowser.UI
             this.tabUserControl5.TabIndex = 10;
             this.tabUserControl5.Load += new System.EventHandler(this.tabUserControl5_Load);
             // 
+            // tabUserControl1
+            // 
+            this.tabUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabUserControl1.Location = new System.Drawing.Point(0, 45);
+            this.tabUserControl1.Name = "tabUserControl1";
+            this.tabUserControl1.Size = new System.Drawing.Size(772, 461);
+            this.tabUserControl1.TabIndex = 11;
+            // 
             // WebBrowserFormM3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 506);
+            this.Controls.Add(this.tabUserControl1);
             this.Controls.Add(this.tabUserControl5);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
@@ -219,5 +229,6 @@ namespace WebBrowser.UI
         public TabUserControl tabUserControl5;
         public System.Windows.Forms.ToolStripMenuItem newTabToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem closeCurrentTabToolStripMenuItem;
+        private TabUserControl tabUserControl1;
     }
 }
