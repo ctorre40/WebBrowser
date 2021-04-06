@@ -13,11 +13,7 @@ namespace WebBrowser.UI
 {
     public partial class TabUserControl : UserControl
     {
-        //Stack<string> urlBackList = new Stack<string>();
-        //Stack<string> urlForwardList = new Stack<string>();
-        //List<HistoryItem> historyItem = new List<HistoryItem>();
-
-
+        
         public TabUserControl()
         {
             InitializeComponent();
@@ -38,33 +34,21 @@ namespace WebBrowser.UI
             {
                 AddressBox.Text = url;
                 webBrowser1.Navigate(url);
-                //HistoryManagerForm listBox1= new HistoryManagerForm();
                 var item = new HistoryItem();
                 item.URL = AddressBox.Text;
                 item.Title = AddressBox.Text;
                 item.Date = DateTime.Now;
                 HistoryManager.AddItem(item);
-                //AddItem();
-                //UpdateHistory();
-                //string oldUrl = url;
-                //urlBackList.Push(oldUrl);
+              
 
             }
         }
 
-        //private void AddItem()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //private void UpdateHistory()
-        //{
-             
-        //}
+       
 
         private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-  
+            AddressBox.Text = webBrowser1.Document.Url.ToString();
         }
 
         private void GoButton_Click(object sender, EventArgs e)
@@ -75,10 +59,7 @@ namespace WebBrowser.UI
             {
                 tabPage1.Text = url;
                 webBrowser1.Navigate(url);
-                //AddItem();
-                //UpdateHistory();
-                //string oldUrl = url;
-                //urlBackList.Push(oldUrl);
+               
                 var item = new HistoryItem();
                 item.URL = AddressBox.Text;
                 item.Title = AddressBox.Text;
@@ -93,23 +74,12 @@ namespace WebBrowser.UI
         {
             webBrowser1.GoBack();
 
-            /**
-            String saveTheUrl = AddressBox.Text;
-            urlForwardList.Push(saveTheUrl); //stores the current url into the forward stack for later usage
-            string bringBackUrl = urlBackList.Pop();
-            webBrowser1.Navigate(bringBackUrl);
-            */
         }
 
         private void ForwardButton_Click(object sender, EventArgs e)
         {
             webBrowser1.GoForward();
-            /**
-            String byeByeUrl = AddressBox.Text;
-            urlBackList.Push(byeByeUrl); //sends the current url to back list 
-            string helloAgain = urlForwardList.Pop();
-            webBrowser1.Navigate(helloAgain);
-            */
+            
         }
 
         private void RefreshButton_Click(object sender, EventArgs e)
@@ -125,13 +95,16 @@ namespace WebBrowser.UI
 
         private void BookMarkButton_Click(object sender, EventArgs e)
         {
-            //here we need to implement code
-            //TabUserControl AddressBox = new TabUserControl();
-            //HistoryManagerForm listBox = new HistoryManagerForm();
+           
             var item = new BookmarkItem();
             item.URL = AddressBox.Text;
-            item.Title = AddressBox.Text;
+            item.Title = webBrowser1.Document.Title;
             BookmarkManager.AddItem(item);
+            //if()
+            //{
+                
+            //    BookmarkManager.AddItem(item);
+            //}
         }
 
         private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -161,11 +134,6 @@ namespace WebBrowser.UI
                     item.Title = AddressBox.Text;
                     item.Date = DateTime.Now;
                     HistoryManager.AddItem(item);
-
-                    //AddItem();
-                    //UpdateHistory();
-                    //string oldUrl = url;
-                    //urlBackList.Push(oldUrl);
 
                 }
 

@@ -124,7 +124,7 @@ namespace WebBrowser.UI
             // 
             this.AddressBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddressBox.Name = "AddressBox";
-            this.AddressBox.Size = new System.Drawing.Size(100, 25);
+            this.AddressBox.Size = new System.Drawing.Size(300, 23);
             this.AddressBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBox_KeyDown);
             this.AddressBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AddressBox_KeyUp);
             this.AddressBox.Click += new System.EventHandler(this.AddressBox_Click);
@@ -135,6 +135,7 @@ namespace WebBrowser.UI
             this.webBrowser1.Location = new System.Drawing.Point(0, 25);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(757, 448);
             this.webBrowser1.TabIndex = 7;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
@@ -157,14 +158,14 @@ namespace WebBrowser.UI
         }
 
         #endregion
-        private System.Windows.Forms.ToolStripButton BackButton;
         private System.Windows.Forms.ToolStripButton ForwardButton;
         private System.Windows.Forms.ToolStripButton RefreshButton;
         private System.Windows.Forms.ToolStripButton HomeButton;
         private System.Windows.Forms.ToolStripButton GoButton;
-        private System.Windows.Forms.ToolStripButton BookMarkButton;
         public System.Windows.Forms.WebBrowser webBrowser1;
         public System.Windows.Forms.ToolStrip toolStrip2;
         public System.Windows.Forms.ToolStripTextBox AddressBox;
+        public System.Windows.Forms.ToolStripButton BookMarkButton;
+        public System.Windows.Forms.ToolStripButton BackButton;
     }
 }

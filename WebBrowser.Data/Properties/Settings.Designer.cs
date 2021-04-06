@@ -34,5 +34,28 @@ namespace WebBrowser.Data.Properties {
                 return ((string)(this["historyDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\ctreb\\source\\repos\\M" +
+            "5Project1\\WebBrowser\\WebBrowser.Data\\bin\\Debug\\dataDB.mdf;Integrated Security=Tr" +
+            "ue")]
+        public string dataDBConnectionString {
+            get {
+                return ((string)(this["dataDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dataDB.mdf;In" +
+            "tegrated Security=True")]
+        public string dataDBConnectionString1 {
+            get {
+                return ((string)(this["dataDBConnectionString1"]));
+            }
+        }
     }
 }
