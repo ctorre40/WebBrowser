@@ -29,10 +29,10 @@ namespace WebBrowser.UI
 
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        //private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -102,31 +102,18 @@ namespace WebBrowser.UI
             MessageBox.Show("Hello there! This is my custom web browser. My name is Casandra. I am from Chicago and I have two cats. My student ID is czt0051. Thanks for checking me out!");
         }
 
-             
 
-        
-        
-    
-
-        private void tabUserControl5_Load(object sender, EventArgs e)
-        {
-            
-            // need to figure out how to get the tab page to take on the name of the url we are on
-
-        }
-
-        private void WebBrowserFormM3_KeyDown(object sender, KeyEventArgs e)
-        {
-            string title = "TabPage " + (tabControl1.TabCount + 1).ToString();
-            TabPage myTabPage = new TabPage(title);
-            tabControl1.TabPages.Add(myTabPage);
-        }
 
         private void menuStrip1_KeyDown(object sender, KeyEventArgs e)
         {
-            string title = "TabPage " + (tabControl1.TabCount + 1).ToString();
+            
+            string title = "TabPage " + (tabControl1.TabCount + 1).ToString(); // gives name to new tabs
             TabPage myTabPage = new TabPage(title);
+            TabUserControl myTabUserControl = new TabUserControl();
+            myTabUserControl.Dock = DockStyle.Fill;
+            myTabPage.Controls.Add(myTabUserControl);
             tabControl1.TabPages.Add(myTabPage);
+
         }
     }
 }

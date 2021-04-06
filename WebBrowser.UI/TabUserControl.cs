@@ -48,7 +48,7 @@ namespace WebBrowser.UI
 
         private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            AddressBox.Text = webBrowser1.Document.Url.ToString();
+            AddressBox.Text = webBrowser1.Document.Url.ToString(); // updates the url to the page we are browsing on
         }
 
         private void GoButton_Click(object sender, EventArgs e)
