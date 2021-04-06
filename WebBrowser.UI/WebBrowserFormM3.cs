@@ -36,7 +36,7 @@ namespace WebBrowser.UI
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string title = "TabPage " + (tabControl1.TabCount + 1).ToString();
+            string title = "TabPage " + (tabControl1.TabCount + 1).ToString(); // gives name to new tabs
             TabPage myTabPage = new TabPage(title);
             TabUserControl myTabUserControl = new TabUserControl();
             myTabUserControl.Dock = DockStyle.Fill;

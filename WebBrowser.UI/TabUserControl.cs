@@ -100,11 +100,9 @@ namespace WebBrowser.UI
             item.URL = AddressBox.Text;
             item.Title = webBrowser1.Document.Title;
             BookmarkManager.AddItem(item);
-            //if()
-            //{
-                
-            //    BookmarkManager.AddItem(item);
-            //}
+            
+
+
         }
 
         private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -112,10 +110,7 @@ namespace WebBrowser.UI
 
         }
 
-        private void AddressBox_KeyUp(object sender, KeyEventArgs e)
-        {
 
-        }
 
         private void AddressBox_KeyDown(object sender, KeyEventArgs e)
         {

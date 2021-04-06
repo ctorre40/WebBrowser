@@ -49,9 +49,9 @@ namespace WebBrowser.UI
             this.ForwardButton,
             this.RefreshButton,
             this.HomeButton,
-            this.GoButton,
             this.BookMarkButton,
-            this.AddressBox});
+            this.AddressBox,
+            this.GoButton});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(757, 25);
@@ -61,62 +61,63 @@ namespace WebBrowser.UI
             // 
             // BackButton
             // 
-            this.BackButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.BackButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.BackButton.Image = ((System.Drawing.Image)(resources.GetObject("BackButton.Image")));
             this.BackButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(72, 22);
+            this.BackButton.Size = new System.Drawing.Size(23, 22);
             this.BackButton.Text = "BackButton";
+            this.BackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // ForwardButton
             // 
-            this.ForwardButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ForwardButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ForwardButton.Image = ((System.Drawing.Image)(resources.GetObject("ForwardButton.Image")));
             this.ForwardButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ForwardButton.Name = "ForwardButton";
-            this.ForwardButton.Size = new System.Drawing.Size(90, 22);
+            this.ForwardButton.Size = new System.Drawing.Size(23, 22);
             this.ForwardButton.Text = "ForwardButton";
             this.ForwardButton.Click += new System.EventHandler(this.ForwardButton_Click);
             // 
             // RefreshButton
             // 
-            this.RefreshButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.RefreshButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.RefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshButton.Image")));
             this.RefreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(86, 22);
+            this.RefreshButton.Size = new System.Drawing.Size(23, 22);
             this.RefreshButton.Text = "RefreshButton";
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // HomeButton
             // 
-            this.HomeButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.HomeButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.HomeButton.Image = ((System.Drawing.Image)(resources.GetObject("HomeButton.Image")));
             this.HomeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(80, 22);
+            this.HomeButton.Size = new System.Drawing.Size(23, 22);
             this.HomeButton.Text = "HomeButton";
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // GoButton
             // 
             this.GoButton.CheckOnClick = true;
-            this.GoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.GoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.GoButton.Image = ((System.Drawing.Image)(resources.GetObject("GoButton.Image")));
             this.GoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(62, 22);
+            this.GoButton.Size = new System.Drawing.Size(23, 22);
             this.GoButton.Text = "GoButton";
             this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
             // BookMarkButton
             // 
-            this.BookMarkButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.BookMarkButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.BookMarkButton.Image = ((System.Drawing.Image)(resources.GetObject("BookMarkButton.Image")));
             this.BookMarkButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BookMarkButton.Name = "BookMarkButton";
-            this.BookMarkButton.Size = new System.Drawing.Size(101, 22);
+            this.BookMarkButton.Size = new System.Drawing.Size(23, 22);
             this.BookMarkButton.Text = "BookMarkButton";
             this.BookMarkButton.Click += new System.EventHandler(this.BookMarkButton_Click);
             // 
@@ -124,9 +125,8 @@ namespace WebBrowser.UI
             // 
             this.AddressBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddressBox.Name = "AddressBox";
-            this.AddressBox.Size = new System.Drawing.Size(300, 23);
+            this.AddressBox.Size = new System.Drawing.Size(400, 25);
             this.AddressBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBox_KeyDown);
-            this.AddressBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AddressBox_KeyUp);
             this.AddressBox.Click += new System.EventHandler(this.AddressBox_Click);
             // 
             // webBrowser1
