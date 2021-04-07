@@ -35,9 +35,9 @@ namespace WebBrowser.UI
             this.ForwardButton = new System.Windows.Forms.ToolStripButton();
             this.RefreshButton = new System.Windows.Forms.ToolStripButton();
             this.HomeButton = new System.Windows.Forms.ToolStripButton();
-            this.GoButton = new System.Windows.Forms.ToolStripButton();
             this.BookMarkButton = new System.Windows.Forms.ToolStripButton();
             this.AddressBox = new System.Windows.Forms.ToolStripTextBox();
+            this.GoButton = new System.Windows.Forms.ToolStripButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -100,17 +100,6 @@ namespace WebBrowser.UI
             this.HomeButton.Text = "HomeButton";
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
-            // GoButton
-            // 
-            this.GoButton.CheckOnClick = true;
-            this.GoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.GoButton.Image = ((System.Drawing.Image)(resources.GetObject("GoButton.Image")));
-            this.GoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(23, 22);
-            this.GoButton.Text = "GoButton";
-            this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
-            // 
             // BookMarkButton
             // 
             this.BookMarkButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -126,8 +115,20 @@ namespace WebBrowser.UI
             this.AddressBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(400, 25);
+            this.AddressBox.Text = "  ";
             this.AddressBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBox_KeyDown);
             this.AddressBox.Click += new System.EventHandler(this.AddressBox_Click);
+            // 
+            // GoButton
+            // 
+            this.GoButton.CheckOnClick = true;
+            this.GoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.GoButton.Image = ((System.Drawing.Image)(resources.GetObject("GoButton.Image")));
+            this.GoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.GoButton.Name = "GoButton";
+            this.GoButton.Size = new System.Drawing.Size(23, 22);
+            this.GoButton.Text = "GoButton";
+            this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
             // webBrowser1
             // 

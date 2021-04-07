@@ -22,7 +22,7 @@ namespace WebBrowser.UI
 
         private void TabUserControl_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void AddressBox_Click(object sender, EventArgs e)

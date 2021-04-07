@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
 
 namespace WebBrowser.UI
 {
@@ -19,7 +20,7 @@ namespace WebBrowser.UI
 
         private void WebBrowserFormM3_Load(object sender, EventArgs e)
         {
-
+            
         }
 
        
@@ -29,19 +30,21 @@ namespace WebBrowser.UI
 
         }
 
-        //private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
 
-        //}
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // code for new tab event
             string title = "TabPage " + (tabControl1.TabCount + 1).ToString(); // gives name to new tabs
             TabPage myTabPage = new TabPage(title);
             TabUserControl myTabUserControl = new TabUserControl();
             myTabUserControl.Dock = DockStyle.Fill;
             myTabPage.Controls.Add(myTabUserControl);
             tabControl1.TabPages.Add(myTabPage);
+
+           // my guess is changing the tab here to produce a new one
+           
+
         }
 
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
@@ -113,6 +116,11 @@ namespace WebBrowser.UI
             myTabUserControl.Dock = DockStyle.Fill;
             myTabPage.Controls.Add(myTabUserControl);
             tabControl1.TabPages.Add(myTabPage);
+
+        }
+
+        private void tabUserControl1_Load(object sender, EventArgs e)
+        {
 
         }
     }

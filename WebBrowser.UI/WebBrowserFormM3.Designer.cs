@@ -46,6 +46,7 @@ namespace WebBrowser.UI
             this.tabUserControl1 = new WebBrowser.UI.TabUserControl();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -155,19 +156,21 @@ namespace WebBrowser.UI
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(772, 21);
+            this.tabControl1.Size = new System.Drawing.Size(772, 482);
             this.tabControl1.TabIndex = 2;
+            this.tabControl1.Click += new System.EventHandler(this.tabUserControl1_Load);
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tabUserControl1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(764, 0);
+            this.tabPage1.Size = new System.Drawing.Size(764, 456);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -175,17 +178,16 @@ namespace WebBrowser.UI
             // tabUserControl1
             // 
             this.tabUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabUserControl1.Location = new System.Drawing.Point(0, 45);
+            this.tabUserControl1.Location = new System.Drawing.Point(3, 3);
             this.tabUserControl1.Name = "tabUserControl1";
-            this.tabUserControl1.Size = new System.Drawing.Size(772, 461);
-            this.tabUserControl1.TabIndex = 11;
+            this.tabUserControl1.Size = new System.Drawing.Size(758, 450);
+            this.tabUserControl1.TabIndex = 0;
             // 
             // WebBrowserFormM3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 506);
-            this.Controls.Add(this.tabUserControl1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -195,6 +197,7 @@ namespace WebBrowser.UI
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
